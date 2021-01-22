@@ -1,3 +1,4 @@
+
 //Problem - 1
 // Convert to meter from kilometer
 var meter = 0;
@@ -10,6 +11,8 @@ function kilometerToMeter(kilometer) {
         return meter;
     }
 }
+// var result = kilometerToMeter(10.5);
+// console.log(result);
 
 
 // Problem - 2
@@ -24,6 +27,9 @@ function budgetCalculator(watch, phone, laptop) {
         return amount;
     }
 }
+// var totalAmount = budgetCalculator(1, 3, 5);
+// console.log(totalAmount);
+
 
 
 // Problem - 3
@@ -41,29 +47,38 @@ function hotelCost(day) {
             return costFirstCategory;
         }
         else if (day <= 20) {
-            costSecondCategory = 10 * 100 + (100 - 20) * (day - 10);
+            costSecondCategory = 100 * 10 + (100 - 20) * (day - 10);
             return costSecondCategory;
         }
         else {
-            costThirdCategory = 10 * 100 + (100 - 20) * 10 + (100 - 50) * (day - 20);
+            costThirdCategory = 100 * 10 + (100 - 20) * 10 + (100 - 50) * (day - 20);
             return costThirdCategory;
         }
     }
 }
+// var totalCost = hotelCost(-120);
+// console.log(totalCost);
+
+
 
 // Problem - 4
 // Largest word or name in an array
 function megaFriend(friendList){
     var bigName = friendList.length;
     
-    for(let i = 0; i < friendList.length; i++){
-        let element = friendList[i];
+   if(friendList.length == 0){
+       return ("There is no name");
+   }
+   else{
+        for(var i = 0; i < friendList.length; i++){
+        var element = friendList[i];
         if(bigName <= element.length){
             bigName = element.length;
             var bigMan = element;
         }
     }
     return bigMan;
+   }
 }
 var bigFriendCheck = megaFriend(["Iftekhar", "Fardin", "Jitu", "Kalam"]);
 console.log(bigFriendCheck);
